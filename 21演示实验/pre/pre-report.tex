@@ -1,0 +1,162 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ctex} % 支持中文
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+% 页面设置
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm, headheight=14.5pt}
+
+% 页眉页脚设置
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{普通物理实验预习报告}
+\lhead{演示实验：楞次定律的可视化探究}
+\rfoot{第 \thepage\ 页}
+
+% 标题格式调整
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+% 标题部分
+\begin{center}
+    \vspace*{1cm}
+    {\Huge \textbf{普通物理实验预习报告}} \\
+    \vspace{0.5cm}
+    {\Large \textbf{实验项目：演示实验设计与探究}} \\
+    \vspace{0.5cm}
+    {\large \textbf{选题方向：楞次定律的“阻碍”效应与能量守恒}}
+    \vspace{1cm}
+\end{center}
+
+% 个人信息
+\noindent
+\begin{tabular}{ll}
+    \textbf{课程名称：} & 普通物理实验 \\
+    \textbf{姓\quad\quad 名：} & [您的姓名] \\
+    \textbf{学\quad\quad 号：} & [您的学号] \\
+    \textbf{专业班级：} & [您的专业班级] \\
+    \textbf{实验日期：} & 2026年3月20日 \\
+    \textbf{指导教师：} & [教师姓名]
+\end{tabular}
+
+\vspace{1cm}
+\hrule
+\vspace{1cm}
+
+\section{理论课痛点分析与选题缘由}
+
+\subsection{最需要演示实验辅助的理论部分}
+在大学物理理论课程中，我认为\textbf{电磁感应章节中的“楞次定律 (Lenz's Law)”}是最需要通过演示实验来辅助理解的部分。
+
+\subsection{选题原因分析}
+在学习该部分内容时，我遇到了以下几个认知难点，认为单纯依靠公式推导难以彻底解决：
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{逻辑嵌套复杂，概念易混淆}：楞次定律的核心表述是“感应电流的磁场总要\textbf{阻碍}引起感应电流的\textbf{磁通量的变化}”。在实际解题中，我经常混淆“阻碍磁通量”与“阻碍磁通量变化”的区别，导致在使用右手螺旋定则判断方向时出现逻辑错误。
+    \item \textbf{动态过程缺乏直观图像}：理论公式 $\mathcal{E} = -\frac{d\Phi}{dt}$ 是高度抽象的数学描述。我很难在脑海中构建出“磁场变化 $\rightarrow$ 产生涡流 $\rightarrow$ 形成新磁场 $\rightarrow$ 产生安培力”这一连串动态的物理过程，尤其是安培力如何具体表现为“阻力”的力学图像。
+    \item \textbf{能量守恒视角的缺失}：教材中提到楞次定律是能量守恒的体现，但如果没有直观的实验现象（如机械能转化为热能），我很难深刻理解为什么感应电流的效果\textbf{必须}是“阻碍”的，以及如果不阻碍会导致怎样的永动机悖论。
+\end{enumerate}
+
+因此，我设计本演示实验，旨在通过强烈的视觉反差和对比实验，将抽象的“阻碍”概念转化为可见的力学现象和可感知的热效应，帮助自己及同学建立清晰的物理图像。
+
+\section{实验设计原理}
+
+本实验基于电磁感应定律和能量守恒定律，核心在于展示涡流（Eddy Current）产生的磁阻尼效应。
+
+\subsection{物理原理}
+当导体（如铜管或铝板）与磁场发生相对运动时，穿过导体回路的磁通量 $\Phi$ 发生变化。根据法拉第电磁感应定律，导体内产生感应电动势：
+\begin{equation}
+    \mathcal{E} = -\frac{d\Phi}{dt}
+\end{equation}
+若导体闭合且电阻为 $R$，则产生感应电流（涡流）$I = \mathcal{E}/R$。该电流激发的感应磁场 $\vec{B}'$ 与原磁场 $\vec{B}$ 相互作用，产生安培力 $\vec{F}$。根据楞次定律，$\vec{F}$ 的方向总是阻碍导体与磁场间的相对运动。
+
+在竖直下落模型中，当磁铁在铜管中下落时，受到的向上的安培力 $F_{\text{安}}$ 与重力 $mg$ 平衡时，磁铁将达到终端速度 $v_t$ 做匀速运动：
+\begin{equation}
+    mg = F_{\text{安}} \propto v
+\end{equation}
+此过程中，重力势能的减少量主要转化为焦耳热 $Q$，而非动能，体现了能量守恒：
+\begin{equation}
+    \Delta E_p = \Delta E_k + Q \approx Q \quad (\text{当 } v \text{ 较小时})
+\end{equation}
+
+\section{演示实验设计方案}
+
+\subsection{实验名称}
+\textbf{“看不见的刹车”——多维度的楞次定律演示系统}
+
+\subsection{实验器材}
+\begin{itemize}
+    \item \textbf{强磁场源}：钕铁硼强磁铁（圆柱形，直径略小于管内径，表面磁场强度 $>0.3\,\text{T}$）。
+    \item \textbf{对比管道}：
+    \begin{itemize}
+        \item 铜管（长度 $\approx 1\,\text{m}$，良导体）
+        \item 塑料管/玻璃管（长度、内径与铜管一致，绝缘体，作为对照组）
+        \item 开槽铜管（沿轴向切开狭缝，用于验证回路闭合性）
+    \end{itemize}
+    \item \textbf{摆片装置}：
+    \begin{itemize}
+        \item 实心铝板摆（闭合回路）
+        \item 梳状铝板摆（开槽，切断大涡流回路）
+        \item 强磁铁阵列（置于摆动最低点）
+    \end{itemize}
+    \item \textbf{测量工具}：秒表（手机计时）、红外测温仪。
+\end{itemize}
+
+\subsection{实验步骤与预期现象}
+
+\subsubsection{环节一：自由落体的“时间膨胀”}
+\begin{enumerate}
+    \item \textbf{操作}：将铜管和塑料管竖直固定。从同一高度同时释放两块相同的强磁铁，分别进入两管。
+    \item \textbf{预期现象}：
+    \begin{itemize}
+        \item \textbf{塑料管}：磁铁做自由落体运动，瞬间落地（$t \approx 0.45\,\text{s}$）。
+        \item \textbf{铜管}：磁铁下落显著变慢，仿佛受到巨大阻力，缓慢飘落，落地时间延长至 $3\sim5\,\text{s}$，且后半程近似匀速。
+    \end{itemize}
+    \item \textbf{自我思考}：这一现象直接打破了“重物下落快”的直觉，直观展示了“阻碍相对运动”。若使用开槽铜管，预期下落速度会加快，证明闭合回路是产生强涡流的必要条件。
+\end{enumerate}
+
+\subsubsection{环节二：涡流的“形状密码”}
+\begin{enumerate}
+    \item \textbf{操作}：将实心铝板摆和梳状铝板摆拉至相同高度释放，使其穿过底部的强磁场区域。
+    \item \textbf{预期现象}：
+    \begin{itemize}
+        \item \textbf{实心铝板}：进入磁场瞬间迅速停止，仿佛撞到“空气墙”。
+        \item \textbf{梳状铝板}：几乎不受影响，正常摆动多次。
+    \end{itemize}
+    \item \textbf{自我思考}：通过对比，我能更深刻地理解涡流的大小与导体几何结构的关系。梳状结构增大了电阻，减小了涡流，从而减弱了磁阻尼。
+\end{enumerate}
+
+\subsubsection{环节三：能量去哪了？}
+\begin{enumerate}
+    \item \textbf{操作}：重复环节一多次后，用红外测温仪测量铜管外壁温度。
+    \item \textbf{预期现象}：铜管温度明显升高。
+    \item \textbf{自我思考}：这验证了机械能转化为电能再转化为内能的过程。如果楞次定律不成立（即不阻碍），磁铁将加速下落产生更多电能，同时动能也增加，这将违背能量守恒定律。
+\end{enumerate}
+
+\section{实验创新点与个人收获}
+
+\subsection{创新点}
+\begin{itemize}
+    \item \textbf{反直觉的视觉冲击}：利用强磁铁制造“慢动作自由落体”，能有效激发探究兴趣。
+    \item \textbf{控制变量严谨}：通过“导体vs绝缘体”、“实心vs开槽”的多组对比，排除了摩擦力等干扰，单一变量指向电磁感应效应。
+    \item \textbf{多感官验证}：结合视觉（慢下落）、触觉/仪器（测温），构建了完整的证据链。
+\end{itemize}
+
+\subsection{预习总结与预期收获}
+通过本次预习和实验设计，我不再仅仅将楞次定律视为一个需要死记硬背的“右手定则”组合，而是将其理解为能量守恒在电磁学中的必然推论。
+我期望在正式实验中：
+\begin{enumerate}
+    \item 亲眼观察到磁铁在铜管中的匀速下落阶段，并尝试通过改变磁铁强度或铜管厚度来定性分析终端速度的变化规律。
+    \item 深刻体会“阻碍变化”而非“阻碍磁通量”的物理本质。
+    \item 将理论课中抽象的 $\frac{d\Phi}{dt}$ 与实际的力学现象（安培力）和热学现象（焦耳热）建立起牢固的联系，为后续学习麦克斯韦方程组打下直观的物理基础。
+\end{enumerate}
+
+\end{document}
