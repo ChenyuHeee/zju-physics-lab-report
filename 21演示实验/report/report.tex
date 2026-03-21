@@ -5,6 +5,12 @@
 \usepackage{enumitem}
 \usepackage{setspace}
 \usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
 
 % 字体设置（与 docx 模板一致）
 \setCJKmainfont{Songti SC}          % 宋体 - 正文默认
@@ -13,14 +19,24 @@
 \setmainfont{Times New Roman}        % 英文默认
 
 % 页面设置
-\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm, headheight=14.5pt}
 
-% 去掉页码
-\pagestyle{empty}
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{普通物理实验报告}
+\lhead{演示实验}
+\rfoot{第 \thepage\ 页}
+
+% 标题格式
+\titleformat{\section}{\CJKfontspec{Heiti SC}\fontsize{16pt}{24pt}\selectfont\bfseries}{}{0em}{}
+\titleformat{\subsection}{\fontsize{14pt}{20pt}\selectfont\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\fontsize{12pt}{18pt}\selectfont\bfseries}{}{0em}{}
 
 \begin{document}
 
 % ========== 封面 ==========
+\thispagestyle{empty}
 \begin{center}
     \vspace*{2cm}
     {\fontsize{36pt}{43pt}\selectfont \textbf{物理实验报告}}
@@ -29,8 +45,7 @@
 
 \begin{center}
     \fontsize{16pt}{24pt}\selectfont
-    \textbf{实验名称：\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_} \\[0.5em]
-    \textbf{实验桌号：\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_} \\[0.5em]
+    \textbf{实验名称：演示实验} \\[0.5em]
     \textbf{指导教师：\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
 \end{center}
 
@@ -54,67 +69,150 @@
 \newpage
 
 % ========== 一、预习报告 ==========
-{\CJKfontspec{Heiti SC}\fontsize{16pt}{24pt}\selectfont \textbf{一、预习报告}}
+\section{一、预习报告}
 
-\vspace{0.3cm}
-{\fontsize{12pt}{18pt}\selectfont （注：将已经写好的"物理实验预习报告"内容拷贝过来）}
+\subsection{1. 实验综述}
 
-\vspace{0.5cm}
-{\fontsize{14pt}{20pt}\selectfont \textbf{1. 实验综述}}
+本次演示实验涵盖声悬浮、电磁跳环和液体龙卷风三个项目。声悬浮实验利用声波在谐振腔中形成驻波，在波节处产生的声辐射力克服重力使小球悬浮，涉及声波干涉与驻波原理。电磁跳环实验通过线圈中的交变电流产生交变磁场，使导体环中产生感应电流，感应电流的磁场与原磁场相互作用产生安培力，使铁环跳起，体现了法拉第电磁感应定律和楞次定律。液体龙卷风实验则通过旋转容器中的液体，模拟龙卷风形成的物理过程，涉及流体力学中的涡旋运动和科里奥利效应。三个实验分别从声学、电磁学和流体力学角度展示了基础物理定律的直观应用。
 
-{\fontsize{12pt}{18pt}\selectfont （自述实验现象、实验原理和实验方法，不超过300字，5分）}
+\subsection{2. 实验重点}
 
-\vspace{3cm}
+理解声驻波波节处声辐射压的产生机制；掌握电磁感应和楞次定律在跳环实验中的具体体现；观察涡旋流动的形成条件和特征，将理论知识与直观现象建立联系。
 
-{\fontsize{14pt}{20pt}\selectfont \textbf{2. 实验重点}}
+\subsection{3. 实验难点}
 
-{\fontsize{12pt}{18pt}\selectfont （简述本实验的学习重点，不超过100字，3分）}
-
-\vspace{3cm}
-
-{\fontsize{14pt}{20pt}\selectfont \textbf{3. 实验难点}}
-
-{\fontsize{12pt}{18pt}\selectfont （简述本实验的实现难点，不超过100字，2分）}
+声悬浮中谐振频率的精确匹配与稳定悬浮条件的维持；电磁跳环中安培力方向的判断及与楞次定律的定量关联；液体龙卷风中湍流与层流转变的观察和涡旋结构的稳定性分析。
 
 \newpage
 
 % ========== 二、原始数据 ==========
-{\CJKfontspec{Heiti SC}\fontsize{16pt}{24pt}\selectfont \textbf{二、原始数据}}
+\section{二、原始数据}
 
-\vspace{0.3cm}
-{\fontsize{12pt}{18pt}\selectfont （将有学生和老师签名的"自备数据记录草稿纸"的扫描或手机拍摄图粘贴在下方，20分）}
+本实验为演示实验，以观察记录和视频截图作为原始数据。
 
-\vspace{\fill}
+\subsection{实验一：声悬浮演示}
+
+\noindent\textbf{实验装置}：谐振腔装置（含频率调节旋钮和音量调节旋钮）、小型泡沫球。
+
+\noindent\textbf{实验记录}：
+\begin{itemize}[nosep]
+    \item 缓慢调节频率旋钮，在某一频率范围内，小球从托盘上飘起并稳定悬浮于谐振腔内。
+    \item 适当增大音量可使悬浮更加稳定，但音量过大时小球会被弹飞。
+    \item 偏离谐振频率时，小球立即落下。
+\end{itemize}
+
+% TODO: 在此处插入声悬浮实验的视频截图
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.6\textwidth]{img/sound-levitation.jpg}
+%     \caption{声悬浮实验：小球在谐振腔内悬浮}
+% \end{figure}
+
+\vspace{2cm}
+
+\subsection{实验二：电磁跳环}
+
+\noindent\textbf{实验装置}：铁芯柱（绕有线圈）、铝环/铁环、交流电源开关。
+
+\noindent\textbf{实验记录}：
+\begin{itemize}[nosep]
+    \item 铁环套在铁芯柱上，闭合开关瞬间，铁环迅速向上跳起，高度约 $30\sim50$ cm。
+    \item 断开开关后重新放置铁环，重复实验现象一致。
+    \item 跳起瞬间可听到明显的电磁声响。
+\end{itemize}
+
+% TODO: 在此处插入电磁跳环实验的视频截图
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.6\textwidth]{img/jumping-ring.jpg}
+%     \caption{电磁跳环实验：铁环在通电瞬间跳起}
+% \end{figure}
+
+\vspace{2cm}
+
+\subsection{实验三：液体龙卷风}
+
+\noindent\textbf{实验装置}：透明圆柱形容器、电动旋转底座、着色液体。
+
+\noindent\textbf{实验记录}：
+\begin{itemize}[nosep]
+    \item 启动旋转底座后，容器中的液体开始旋转，中心逐渐形成凹陷。
+    \item 旋转速度增大，中心凹陷加深，形成明显的漏斗状涡旋，形态类似龙卷风。
+    \item 停止旋转后，涡旋逐渐消散，液面恢复平静。
+\end{itemize}
+
+% TODO: 在此处插入液体龙卷风实验的视频截图
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.6\textwidth]{img/liquid-tornado.jpg}
+%     \caption{液体龙卷风实验：液体中形成的漏斗状涡旋}
+% \end{figure}
 
 \newpage
 
 % ========== 三、结果与分析 ==========
-{\CJKfontspec{Heiti SC}\fontsize{16pt}{24pt}\selectfont \textbf{三、结果与分析}}
+\section{三、结果与分析}
 
-\vspace{0.5cm}
-{\fontsize{14pt}{20pt}\selectfont 1. 数据处理与结果}
+\subsection{1. 实验现象分析}
 
-{\fontsize{12pt}{18pt}\selectfont （列出数据表格、选择数据处理方法、给定测量或计算结果，30分）}
+\subsubsection{（1）声悬浮实验}
 
-\vspace{5cm}
+声悬浮的核心原理是\textbf{声驻波}。当谐振腔中发射的声波与反射波叠加形成驻波时，在波节（压力最大处）附近产生声辐射压。对于小球而言，波节上下两侧的压力差形成一个指向波节的恢复力。当此声辐射力的竖直分量等于小球重力时，小球实现稳定悬浮：
+\begin{equation}
+    F_{\text{rad}} = mg
+\end{equation}
 
-{\fontsize{14pt}{20pt}\selectfont 2．误差分析}
+实验中调节频率即是寻找谐振腔的共振频率，使驻波在小球位置稳定形成。增大音量意味着增大声波振幅，从而增大声辐射力，使悬浮更稳定。但振幅过大时，非线性效应使声场不稳定，导致小球被弹飞。
 
-{\fontsize{12pt}{18pt}\selectfont （运用测量误差、相对误差、不确定度等分析实验结果，20分）}
+\subsubsection{（2）电磁跳环实验}
 
-\vspace{4cm}
+接通交流电后，线圈中的电流 $I(t) = I_0 \sin(\omega t)$ 产生交变磁场 $B(t)$。根据法拉第电磁感应定律，穿过铁环的磁通量变化在环中感应出电动势：
+\begin{equation}
+    \mathcal{E} = -\frac{d\Phi}{dt} = -\frac{d(BS)}{dt}
+\end{equation}
+铁环作为闭合导体回路，产生感应电流 $I_{\text{ind}}$。根据楞次定律，感应电流的磁场方向阻碍原磁通量的变化。在通电瞬间，$dB/dt$ 最大，感应电流最强，感应电流与原磁场的相互作用产生向上的安培力（排斥力），使铁环跳起：
+\begin{equation}
+    F = BIL = B \cdot \frac{\mathcal{E}}{R} \cdot 2\pi r
+\end{equation}
+当此力远大于铁环重力时，铁环被弹射而起。
 
-{\fontsize{14pt}{20pt}\selectfont 3．实验探讨}
+\subsubsection{（3）液体龙卷风实验}
 
-{\fontsize{12pt}{18pt}\selectfont （对实验内容、现象和过程的小结，不超过100字，10分）}
+液体龙卷风的形成涉及\textbf{角动量守恒}和\textbf{伯努利原理}。旋转底座给予液体初始角动量 $L = I\omega$。当液体向中心汇聚时，由于角动量守恒：
+\begin{equation}
+    r_1 v_1 = r_2 v_2 \quad (r_2 < r_1 \Rightarrow v_2 > v_1)
+\end{equation}
+越靠近中心，切向速度越大。根据伯努利原理，流速越高的区域压强越低，中心压强低于外围，液面因此下凹形成漏斗状涡旋。这与自然界中龙卷风的形成机制相同——暖湿气流上升产生的旋转不断被角动量守恒效应放大。
+
+\subsection{2. 三个实验的物理共性}
+
+三个演示实验虽涉及不同物理领域，但都体现了以下共性：
+\begin{itemize}[nosep]
+    \item \textbf{能量转化}：声悬浮中声能转化为势能；电磁跳环中电磁能转化为动能；液体龙卷风中旋转动能转化为涡旋的动能和势能。
+    \item \textbf{平衡与失稳}：三个实验都存在稳定条件——谐振频率、电流强度、旋转速度，偏离条件即失去现象。
+    \item \textbf{宏观现象源于微观机制}：悬浮源于声辐射压，跳环源于感应电流的安培力，涡旋源于流体微元的角动量守恒。
+\end{itemize}
+
+\subsection{3. 实验探讨}
+
+本次三个演示实验分别从声学、电磁学和流体力学角度展示了基础物理定律的直观效果。声悬浮让我理解了驻波的实际应用，电磁跳环将楞次定律从公式变为可见的力学现象，液体龙卷风则让我直观感受了角动量守恒的威力。演示实验的价值在于将抽象理论转化为感性认知，为后续深入学习奠定直觉基础。
 
 \newpage
 
 % ========== 四、思考题 ==========
-{\CJKfontspec{Heiti SC}\fontsize{16pt}{24pt}\selectfont \textbf{四、思考题}}
+\section{四、思考题}
 
-\vspace{0.3cm}
-{\fontsize{12pt}{18pt}\selectfont （解答教材或讲义或老师指定的思考题，10分）}
+\subsection{1. 声悬浮实验中，为什么小球只能在特定频率下悬浮？}
+
+因为只有在谐振腔的共振频率下，声波才能形成稳定的驻波。驻波的波节位置固定，在波节处才有稳定的声辐射压场。偏离共振频率时，反射波与入射波无法形成稳定的干涉图样，声辐射力消失或不足以平衡重力，小球因此落下。
+
+\subsection{2. 电磁跳环实验中，如果将交流电源换成直流电源，还会有跳环现象吗？}
+
+不会持续跳环。直流电源接通的\textbf{瞬间}，由于电流从零突变，$dI/dt$ 很大，磁通量急剧变化，铁环可能短暂跳起。但一旦电流达到稳态，$dB/dt = 0$，不再有感应电动势，铁环不会继续受到安培力。因此，直流电源只能在开关接通或断开的瞬间产生短暂的跳环效果，无法像交流电源那样持续提供变化的磁场。
+
+\subsection{3. 液体龙卷风实验能否用来解释真实龙卷风的形成？}
+
+可以部分类比，但有本质区别。液体龙卷风由底部强制旋转驱动，而真实龙卷风由大气中温差引起的对流和地球自转（科里奥利力）共同驱动。两者的共同点是都遵循角动量守恒——流体向中心汇聚时旋转速度急剧增大。但真实龙卷风的形成还涉及大气不稳定层结、风切变、超级单体风暴等复杂气象条件，远比实验室模型复杂。
 
 \vfill
 
