@@ -2,9 +2,14 @@
 \usepackage[fontset=none]{ctex}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage{enumitem}
 \usepackage{setspace}
 \usepackage{fontspec}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{multirow}
 
 % 字体设置（与 docx 模板一致）
 \setCJKmainfont{Songti SC}          % 宋体 - 正文默认
@@ -29,7 +34,7 @@
 
 \begin{center}
     \fontsize{16pt}{24pt}\selectfont
-    \textbf{实验名称：\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_} \\[0.5em]
+    \textbf{实验名称：密立根油滴实验\quad} \\[0.5em]
     \textbf{实验桌号：\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_} \\[0.5em]
     \textbf{指导教师：\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
 \end{center}
@@ -56,25 +61,44 @@
 % ========== 一、预习报告 ==========
 {\CJKfontspec{Heiti SC}\fontsize{16pt}{24pt}\selectfont \textbf{一、预习报告}}
 
-\vspace{0.3cm}
-{\fontsize{12pt}{18pt}\selectfont （注：将已经写好的"物理实验预习报告"内容拷贝过来）}
-
 \vspace{0.5cm}
 {\fontsize{14pt}{20pt}\selectfont \textbf{1. 实验综述}}
 
-{\fontsize{12pt}{18pt}\selectfont （自述实验现象、实验原理和实验方法，不超过300字，5分）}
+\vspace{0.3cm}
 
-\vspace{3cm}
+{\fontsize{12pt}{18pt}\selectfont
+
+密立根油滴实验是近代物理学的经典实验之一，首次精确测定了基本电荷$e$，证实了电荷的量子性——所有带电体的电量均是最小基本电荷$e$的整数倍。
+
+实验原理：带电油滴在两平行极板间同时受重力和静电力作用。实验采用\textbf{静态平衡法}与\textbf{匀速下降法}相结合：（1）\textbf{静态平衡}：调节极板电压$U$使油滴悬停，此时静电力与重力平衡，即$qU/d = mg$；（2）\textbf{匀速下降}：撤去电压后油滴在重力作用下加速，最终达到终端速度$v_g$匀速下落，由斯托克斯定律（引入康宁汉修正）得到油滴修正半径$r'$，进而求出质量$m$；（3）由平衡电压$U$、板间距$d$和质量$m$计算每颗油滴的带电量$q = mgd/U$；（4）对多颗油滴的电荷量用\textbf{公约数法}求最大公约数，即基本电荷量$e$。
+
+实验装置为密立根油滴仪：平行极板（板间距$d$约5\,mm）、显微镜、CCD成像系统、显示屏、喷雾器及计时器。实验选取带电量小于10$e$、平衡电压约200\,V、下落时间在10\,s/mm以内的清晰油滴。
+
+}
+
+\vspace{0.5cm}
 
 {\fontsize{14pt}{20pt}\selectfont \textbf{2. 实验重点}}
 
-{\fontsize{12pt}{18pt}\selectfont （简述本实验的学习重点，不超过100字，3分）}
+\vspace{0.3cm}
 
-\vspace{3cm}
+{\fontsize{12pt}{18pt}\selectfont
+
+掌握静态平衡法与匀速下降法相结合的测量原理；理解康宁汉修正公式对微小油滴半径的修正意义；学会由终端速度$v_g$和平衡电压$U$计算电荷量$q$，并熟练运用公约数法提取基本电荷量$e$，验证电荷量子化。
+
+}
+
+\vspace{0.5cm}
 
 {\fontsize{14pt}{20pt}\selectfont \textbf{3. 实验难点}}
 
-{\fontsize{12pt}{18pt}\selectfont （简述本实验的实现难点，不超过100字，2分）}
+\vspace{0.3cm}
+
+{\fontsize{12pt}{18pt}\selectfont
+
+在CCD显示屏上准确甄别并跟踪合适油滴（带电量适中，不受布朗运动显著干扰）；精确判断油滴达到匀速下落状态以减小计时误差；对各油滴电荷量进行整数化时正确估计所带基本电荷数$n$，避免倍数判断的失误；对测量数据合理估算不确定度。
+
+}
 
 \newpage
 
@@ -84,7 +108,56 @@
 \vspace{0.3cm}
 {\fontsize{12pt}{18pt}\selectfont （将有学生和老师签名的"自备数据记录草稿纸"的扫描或手机拍摄图粘贴在下方，20分）}
 
-\vspace{\fill}
+\vspace{0.5cm}
+
+% 将原始数据照片（含老师签名）放置在此处，文件名自定，如 raw_data.jpg
+% \begin{center}
+% \includegraphics[width=0.85\textwidth]{raw_data.jpg}
+% \end{center}
+
+\vspace{0.5cm}
+
+{\fontsize{12pt}{18pt}\selectfont \textbf{实验仪器参数（实验时记录）：}}
+
+\vspace{0.3cm}
+
+{\fontsize{11pt}{16pt}\selectfont
+\begin{tabular}{ll}
+    板间距 $d$ = & \underline{\qquad\qquad} mm \\[0.5em]
+    大气压强 $p$ = & \underline{\qquad\qquad} Pa（\underline{\qquad\qquad}\,hPa）\\[0.5em]
+    油的密度 $\rho_{\text{油}}$ = & $981$ kg/m$^3$ \\[0.5em]
+    空气密度 $\rho_{\text{空}}$ = & $1.205$ kg/m$^3$（20\,$^\circ$C）\\[0.5em]
+    空气粘滤系数 $\eta$ = & $1.81 \times 10^{-5}$\,Pa$\cdot$s（20\,$^\circ$C）\\[0.5em]
+    重力加速度 $g$ = & 9.793\,m/s$^2$（杭州）\\[0.5em]
+    康宁汉修正常数 $b_0$ = & $8.226 \times 10^{-3}$\,Pa$\cdot$m \\
+\end{tabular}
+}
+
+\vspace{0.8cm}
+
+{\fontsize{12pt}{18pt}\selectfont \textbf{表1：油滴原始测量数据}}
+
+\vspace{0.3cm}
+
+{\fontsize{9.5pt}{13pt}\selectfont
+\begin{tabular}{c|c|c|ccccc|c|c}
+    \toprule
+    油滴编号 & 平衡电压 & 下落距离 & \multicolumn{5}{c|}{下落时间} & 平均时间 & 终端速度 \\
+    $i$ & $U_i$/V & $L_i$/mm & $t_{i1}$/s & $t_{i2}$/s & $t_{i3}$/s & $t_{i4}$/s & $t_{i5}$/s & $\bar{t}_i$/s & $v_{gi}$/(mm/s) \\
+    \midrule
+    1  & & & & & & & & & \\[0.6em]
+    2  & & & & & & & & & \\[0.6em]
+    3  & & & & & & & & & \\[0.6em]
+    4  & & & & & & & & & \\[0.6em]
+    5  & & & & & & & & & \\[0.6em]
+    6  & & & & & & & & & \\[0.6em]
+    7  & & & & & & & & & \\[0.6em]
+    8  & & & & & & & & & \\[0.6em]
+    9  & & & & & & & & & \\[0.6em]
+    10 & & & & & & & & & \\[0.6em]
+    \bottomrule
+\end{tabular}
+}
 
 \newpage
 
@@ -92,29 +165,199 @@
 {\CJKfontspec{Heiti SC}\fontsize{16pt}{24pt}\selectfont \textbf{三、结果与分析}}
 
 \vspace{0.5cm}
-{\fontsize{14pt}{20pt}\selectfont 1. 数据处理与结果}
 
-{\fontsize{12pt}{18pt}\selectfont （列出数据表格、选择数据处理方法、给定测量或计算结果，30分）}
+{\fontsize{14pt}{20pt}\selectfont \textbf{1. 数据处理与结果}}
 
-\vspace{5cm}
+\vspace{0.3cm}
 
-{\fontsize{14pt}{20pt}\selectfont 2．误差分析}
+{\fontsize{12pt}{18pt}\selectfont
 
-{\fontsize{12pt}{18pt}\selectfont （运用测量误差、相对误差、不确定度等分析实验结果，20分）}
+\textbf{（1）计算公式}
 
-\vspace{4cm}
+设油滴呈球形，密度为$\rho_{\text{油}}$，在无电场时匀速下落，由斯托克斯定律：
+\begin{equation}
+    \frac{4}{3}\pi r^3(\rho_{\text{油}} - \rho_{\text{空}})g = 6\pi\eta r v_g
+\end{equation}
+得到未修正半径：
+\begin{equation}
+    r = \sqrt{\frac{9\eta v_g}{2g(\rho_{\text{油}} - \rho_{\text{空}})}}
+\end{equation}
 
-{\fontsize{14pt}{20pt}\selectfont 3．实验探讨}
+由于油滴半径$r$与空气分子自由程可比，需引入\textbf{康宁汉修正}：
+\begin{equation}
+    r' = -\frac{b_0}{2p} + \sqrt{\left(\frac{b_0}{2p}\right)^2 + r^2}
+\end{equation}
+其中$b_0 = 8.226\times10^{-3}$\,Pa$\cdot$m，$p$为大气压（Pa）。
 
-{\fontsize{12pt}{18pt}\selectfont （对实验内容、现象和过程的小结，不超过100字，10分）}
+修正后的油滴质量：
+\begin{equation}
+    m = \frac{4}{3}\pi r'^3(\rho_{\text{油}} - \rho_{\text{空}})
+\end{equation}
+
+油滴所带电荷量（静态平衡条件$qU = mgd$）：
+\begin{equation}
+    q = \frac{mgd}{U}
+\end{equation}
+
+\textbf{（2）计算结果表}
+
+}
+
+\vspace{0.3cm}
+
+{\fontsize{9.5pt}{13pt}\selectfont
+\begin{tabular}{c|c|c|c|c|c|c}
+    \toprule
+    油滴编号$i$ & $v_{gi}$/(mm/s) & $r'_i$/($\times10^{-6}$m) & $m_i$/($\times10^{-16}$kg) & $q_i$/($\times10^{-19}$C) & $n_i$ & $e_i = q_i/n_i$/($\times10^{-19}$C) \\
+    \midrule
+    1  & & & & & & \\[0.6em]
+    2  & & & & & & \\[0.6em]
+    3  & & & & & & \\[0.6em]
+    4  & & & & & & \\[0.6em]
+    5  & & & & & & \\[0.6em]
+    6  & & & & & & \\[0.6em]
+    7  & & & & & & \\[0.6em]
+    8  & & & & & & \\[0.6em]
+    9  & & & & & & \\[0.6em]
+    10 & & & & & & \\[0.6em]
+    \bottomrule
+\end{tabular}
+}
+
+\vspace{0.5cm}
+
+{\fontsize{12pt}{18pt}\selectfont
+
+\textbf{（3）用公约数法确定基本电荷量}
+
+排除不合格油滴，将剩余$N$个油滴的$q_i$从小到大排列，计算相邻差值，以最小公约单位估算$e_0$，确定各$n_i = \text{round}(q_i/e_0)$，由$e_i = q_i/n_i$求均值：
+
+\begin{equation}
+    \bar{e} = \frac{1}{N}\sum_{i=1}^{N}\frac{q_i}{n_i} = \underline{\qquad\qquad} \times 10^{-19} \text{ C}
+\end{equation}
+
+}
+
+\vspace{0.5cm}
+
+{\fontsize{14pt}{20pt}\selectfont \textbf{2. 误差分析}}
+
+\vspace{0.3cm}
+
+{\fontsize{12pt}{18pt}\selectfont
+
+\textbf{（1）不确定度计算}
+
+$e$的A类不确定度（对$e_i = q_i/n_i$作统计，共$N$个有效油滴）：
+\begin{equation}
+    u_A(e) = \sqrt{\frac{\sum_{i=1}^{N}\left(e_i - \bar{e}\right)^2}{N(N-1)}} = \underline{\qquad\qquad} \times 10^{-19} \text{ C}
+\end{equation}
+
+$e$的B类不确定度（主要来源为人工计时误差$\Delta t \approx 0.1$\,s，由误差传递$u_B \approx \frac{3}{2}\frac{\Delta t}{\bar{t}}\bar{e}$）：$u_B = \underline{\qquad\qquad} \times 10^{-19}$ C
+
+合成不确定度：
+\begin{equation}
+    U(e) = \sqrt{u_A^2(e) + u_B^2(e)} = \underline{\qquad\qquad} \times 10^{-19} \text{ C}
+\end{equation}
+
+实验结果：
+\begin{equation}
+    e = \bar{e} \pm U(e) = \left(\underline{\qquad} \pm \underline{\qquad}\right) \times 10^{-19} \text{ C} \qquad \text{（置信概率 $P = 68.3\%$）}
+\end{equation}
+
+与公认值$e_0 = 1.602\times10^{-19}$\,C比较，相对误差：
+\begin{equation}
+    \delta = \frac{|\bar{e} - e_0|}{e_0} \times 100\% = \underline{\qquad\qquad}\%
+\end{equation}
+
+\textbf{（2）主要误差来源分析}
+
+\begin{itemize}[nosep, leftmargin=2em]
+    \item \textbf{计时误差}：人工计时反应时间约0.1\,s，对下落时间较短（$<5$\,s）的油滴影响显著，建议选择下落较慢的油滴以减小此误差。
+    \item \textbf{平衡电压读数误差}：电压表的分辨率限制，读数误差约$\pm 1$\,V，对$q$贡献相对误差约$0.5\%$。
+    \item \textbf{康宁汉修正不完善}：$b_0$值的不确定性及大气压$p$的测量误差。
+    \item \textbf{油滴非球形偏差}：实际油滴可能因蒸发或碰撞而偏离球形，导致斯托克斯定律有额外误差。
+\end{itemize}
+
+}
+
+\vspace{0.5cm}
+
+{\fontsize{14pt}{20pt}\selectfont \textbf{3. 实验探讨}}
+
+\vspace{0.3cm}
+
+{\fontsize{12pt}{18pt}\selectfont
+
+% 对实验内容、现象和过程的小结，不超过100字
+\underline{\hspace{\textwidth}}
+
+\vspace{0.5em}
+\underline{\hspace{\textwidth}}
+
+}
 
 \newpage
 
 % ========== 四、思考题 ==========
 {\CJKfontspec{Heiti SC}\fontsize{16pt}{24pt}\selectfont \textbf{四、思考题}}
 
-\vspace{0.3cm}
-{\fontsize{12pt}{18pt}\selectfont （解答教材或讲义或老师指定的思考题，10分）}
+\vspace{0.5cm}
+
+{\fontsize{12pt}{18pt}\selectfont
+
+\textbf{1. 在测量油滴匀速下落一段距离所花的时间$t$时，应选择哪一段最为合适？原因是什么？}
+
+\vspace{0.2cm}
+
+应选择\textbf{油滴进入匀速状态后的中间段}进行计时，避免在刚撤去电场后立即开始计时。原因：撤去电场瞬间，油滴尚未达到终端速度，仍处于加速阶段；只有当斯托克斯阻力与重力（含浮力）完全平衡后，油滴才做匀速运动。若在加速阶段计时，测得的平均速度偏大，导致$v_g$偏大，最终使得计算出的油滴半径$r'$和电荷量$q$偏大。实际操作中，应目视确认油滴运动速度稳定、轨迹匀速后再按下计时器。
+
+\vspace{0.5cm}
+
+\textbf{2. 什么样的油滴才是合适的待测油滴？该如何挑选呢？可结合自己的实际操作，做一些适当的展开。}
+
+\vspace{0.2cm}
+
+合适的油滴应满足：（1）\textbf{大小适中}——在显微镜中清晰可见、亮度适中，既不过亮（太大，布朗运动影响小但带电量可能很大）也不过暗（太小，布朗运动干扰显著）；（2）\textbf{带电量合适}——能在100\,V$\sim$300\,V的电压下实现静态平衡，对应带1$\sim$5个基本电荷，便于公约数法确定$n$；（3）\textbf{匀速下落时间适当}——$t > 5\,\text{s}$（即速度$v_g$不过快），以减小计时相对误差。
+
+实际挑选过程：喷入油雾后，先用$\pm$200\,V左右电压扫描，找到施加电压后能静止或缓慢运动的油滴；随后细调电压使其静止，记录平衡电压；撤去电场后观察自由下落速度，每格（0.25\,mm/格）历时应超过1\,s。若遇到下落极快的油滴（$t < 2\,\text{s}$），说明该液滴带电量过大或体积过大，应予以舍弃重新选取。
+
+\vspace{0.5cm}
+
+\textbf{3. 对油滴进行跟踪测量时，有时油滴会变得模糊。这是为什么呢？应怎样避免在测量过程中失去油滴？}
+
+\vspace{0.2cm}
+
+油滴变模糊的原因：（1）\textbf{焦距偏移}——油滴在竖直方向运动时，若光学系统景深有限，油滴偏离焦平面即变模糊，需及时调节焦距旋钮跟踪；（2）\textbf{油滴漂出视野}——受轻微气流或带电作用，油滴可能横向漂移出视场；（3）\textbf{油滴蒸发}——长时间观测下，小油滴质量减小，半径变小，图像模糊并可能消失；（4）\textbf{带电量改变}——油滴捕获或失去离子后，平衡条件改变，突然加速运动。
+
+避免失去油滴的方法：计时前先在静止状态下调好焦距；测量中随时微调焦距旋钮；若油滴横向漂移，可轻微施加反向电场引导；尽量缩短单次测量时间（5次重复及时完成），避免油滴蒸发或带电量变化。
+
+\vspace{0.5cm}
+
+\textbf{4. 尝试用其他数据处理方式，处理数据，计算基本电荷量。}
+
+\vspace{0.2cm}
+
+实验讲义附录介绍了两种补充方法，以自己的测量数据加以演示：
+
+\textbf{方法一：平均值法}\quad 将$N$个有效油滴的电量$q_i$从小到大排列，对相邻两个电量相减得一阶差值序列$\{\Delta_j = q_{j+1}' - q_j'\}$。从中识别出$\Delta n = 1$对应的差值（即两组之间的跨组差值，数值明显大于组内分散），对这些差值取平均即得$e$的估计值：
+\[
+e_{\text{avg}} = \frac{1}{k}\sum_{\Delta n=1} \Delta_j
+\]
+
+\textbf{方法二：多重差值法}\quad 在平均值法基础上，对一阶差值序列$\{\Delta_j^{(1)}\}$继续作差，得二阶差值$\Delta_j^{(2)} = \Delta_{j+1}^{(1)} - \Delta_j^{(1)}$，依此类推进行多次差值运算。通过逐级消除组内测量分散的影响，使代表单个$e$的特征差值逐步凸显。
+
+将上述方法与主方案（公约数法）所得结果进行比较，分析各方法的适用条件及误差特点。
+
+\textbf{说明}：平均值法和多重差值法均依赖于足够的有效油滴数量以及较低的组内测量分散；当部分$n$组数据质量较差时，公约数法通常更稳健。
+
+\textbf{方法三：最小二乘法}\quad 在公约数法确定各$n_i$后，利用强制过原点的最小二乘拟合$q = ne$，斜率即为$e$：
+\[
+e = \frac{\sum_i n_i q_i}{\sum_i n_i^2}
+\]
+代入自己的$n_i$和$q_i$（见表2）计算并与算术平均法结果比较。最小二乘法对$n_i$较大的油滴赋予更大权重，对单个$e_i$的随机误差具有更强的抑制效果。
+
+}
 
 \vfill
 
