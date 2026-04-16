@@ -1,0 +1,115 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[fontset=none]{ctex}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{fontspec}
+
+% 字体设置（与 docx 模板一致）
+\setCJKmainfont{Songti SC}          % 宋体 - 正文默认
+\setCJKsansfont{Heiti SC}            % 黑体 - 一级标题
+\setCJKmonofont[AutoFakeBold]{STFangsong}          % 仿宋 - 注意事项
+\setmainfont{Times New Roman}        % 英文默认
+
+% 页面设置
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+
+% 去掉页码
+\pagestyle{empty}
+
+\begin{document}
+
+% ========== 封面 ==========
+\begin{center}
+    \vspace*{2cm}
+    {\fontsize{36pt}{43pt}\selectfont \textbf{物理实验预习报告}}
+    \vspace{3cm}
+\end{center}
+
+\begin{center}
+    \fontsize{16pt}{24pt}\selectfont
+    \textbf{实验名称：数字示波器的原理及应用\quad} \\[0.5em]
+    \textbf{指导教师：\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+\end{center}
+
+\vspace{2cm}
+
+\begin{center}
+    \fontsize{14pt}{28pt}\selectfont
+    \textbf{周次：\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_} \\
+    \textbf{姓名：\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_} \\
+    \textbf{学号：\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_} \\[0.5em]
+    \textbf{实验日期: \_\_\_\_年\_\_\_\_月\_\_\_\_日\quad 星期\_\_\_上/下午}
+\end{center}
+
+\vspace{1.5cm}
+
+\begin{center}
+    \fontsize{14pt}{20pt}\selectfont
+    浙江大学物理实验教学中心
+\end{center}
+
+\newpage
+
+% ========== 正文 ==========
+
+{\fontsize{14pt}{20pt}\selectfont \textbf{1. 实验综述}}
+
+\vspace{0.3cm}
+
+{\fontsize{12pt}{18pt}\selectfont
+
+示波器是一种用途广泛的电子测量仪器，能观测电信号波形并测量其幅度、周期、频率和相位差等参量。本实验使用RIGOL DS1102型数字示波器和SG1020A信号发生器进行测量。
+
+数字示波器的工作原理：待测信号经探头输入后，首先通过衰减器与放大器调节幅度至ADC的合适输入范围；然后由模数转换器（ADC）以一定采样率将模拟信号转换为离散的数字采样点并存入存储器；触发模块采用施密特触发方式，将触发信号转换为同频率方波以确定采样的时间起止点，实现与待测信号的同步，使波形稳定显示；最后由数据处理器对采样点进行内插、测量等处理后在液晶屏上显示波形。示波器的关键指标包括带宽、采样率和存储深度。
+
+实验内容包括：（1）使用直读法和光标法测量正弦波、方波、三角波的峰峰值与频率；（2）利用X-Y模式观察李萨如图形，根据$f_y : f_x = N_x : N_y$的关系测量未知信号频率；（3）测量二极管正向导通电压及伏安特性；（4）使用驻波法测量超声波声速。
+
+}
+
+\vspace{0.5cm}
+
+{\fontsize{14pt}{20pt}\selectfont \textbf{2. 实验重点}}
+
+\vspace{0.3cm}
+
+{\fontsize{12pt}{18pt}\selectfont
+
+掌握数字示波器的基本结构和工作原理，熟悉垂直挡位、水平时基和触发电平的调节方法；学会使用直读法、光标法和自动测量功能测量信号的幅度、频率等参量；掌握X-Y模式下利用李萨如图形测量未知信号频率的方法。
+
+}
+
+\vspace{0.5cm}
+
+{\fontsize{14pt}{20pt}\selectfont \textbf{3. 实验难点}}
+
+\vspace{0.3cm}
+
+{\fontsize{12pt}{18pt}\selectfont
+
+正确选择触发源、耦合方式并调节触发电平以获得稳定波形；在李萨如图形观测中准确判别交点数$N_x$和$N_y$以确定频率比；理解带宽、采样率与存储深度三者之间的制约关系及其对测量精度的影响。
+
+}
+
+\vfill
+
+% ========== 注意事项 ==========
+\noindent\rule{\textwidth}{0.4pt}
+
+{\CJKfontspec[AutoFakeBold]{STFangsong}\fontsize{12pt}{18pt}\selectfont
+\textbf{注意事项：}
+\begin{enumerate}[label=\arabic*., leftmargin=2em, nosep]
+    \item 用PDF格式上传"预习报告"，文件名：学生姓名+学号+实验名称+周次。
+    \item "预习报告"必须递交在"学在浙大"的本课程的对应实验项目的"作业"模块内。
+    \item "预习报告"还须拷贝到"实验报告"中（便以教师批改）。
+\end{enumerate}
+}
+
+\vspace{0.5cm}
+\begin{center}
+    {\CJKfontspec[AutoFakeBold]{STFangsong}\fontsize{12pt}{18pt}\selectfont \textbf{浙江大学物理实验教学中心制}}
+\end{center}
+
+\end{document}
